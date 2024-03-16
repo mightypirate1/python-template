@@ -2,14 +2,9 @@
 *egg-info/
 .venv/
 __pycache__
-
-# build
-build
+.ruff_cache
 
 # editors
-## intellij
-.idea
-*.iml
 
 ## vscode
 .vscode/
