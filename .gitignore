@@ -1,0 +1,20 @@
+# python
+*egg-info/
+.venv/
+__pycache__
+
+# build
+build
+
+# editors
+## intellij
+.idea
+*.iml
+
+## vscode
+.vscode/
+.history/
+*.vsix
+
+## test repo
+.test_repo
