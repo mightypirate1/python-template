@@ -65,4 +65,5 @@ github-init:
 	git commit -m "Generated from template"
 	git remote add origin git@github.com:mightypirate1/{{cookiecutter.repository_name}}.git
 	git branch cookiecutter-template
-	git push -u origin main cookiecutter-template
+	git push -u origin main
+	git push -u origin cookiecutter-template
