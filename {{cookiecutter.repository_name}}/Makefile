@@ -33,8 +33,8 @@ coverage: ## check code coverage quickly with the default Python
 develop: clean venv
 	bash -c "\
 	source .venv/bin/activate && \
-	pip install uv &&
-	uv pip install -e .[dev] \
+	pip install uv && \
+	uv pip install -e ."[dev]" \
     "
 install:
 	pip install . ## install the package to the active Python's site-packages
