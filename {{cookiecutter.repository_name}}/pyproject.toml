@@ -2,6 +2,31 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "{{ cookiecutter.repository_name }}"
+dynamic = ["version"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "build",
+    "cookiecutter-project-upgrader",
+    "coverage",
+    "ipykernel",
+    "ipython",
+    "isort",
+    "mypy",
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "{{cookiecutter.module_name}}.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+
 [tool.black]
 line-length = 120
 
@@ -57,7 +82,6 @@ lint.extend-select = [
     "D301",   # docstring needs r""" if containing backslash
 ]
 lint.ignore = [
-    "ANN101",  # MissingTypeSelf
     "ANN401",  # Dynamically typed expressions in args/kwargs
     "B905",    # Allow zip without strict kwarg
     "C90",     # McCabe complexity
